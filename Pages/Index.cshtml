@@ -1,0 +1,18 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Infinite List or Paged List Sample</h1>
+</div>
+
+@foreach (var tour in Model.Tours)
+{
+    <div class="tour">
+        <h6>@tour.TourDate.ToShortDateString()</h6>
+        <h3>@tour.TourTitle</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tempus elementum massa at eleifend. Pellentesque justo urna, pellentesque sed felis sed, ullamcorper ornare velit. Maecenas semper urna ac erat dapibus semper. Duis sodales dolor vel consectetur ornare. Praesent non elit erat. Pellentesque tincidunt, velit vitae finibus hendrerit, urna lacus efficitur lectus, a tincidunt lorem diam vel elit. Suspendisse gravida pulvinar ante. Nullam condimentum tincidunt tellus, et aliquam neque elementum laoreet. Pellentesque lectus libero, interdum nec tellus id, maximus congue ligula. Donec vulputate eros risus, sed suscipit libero vulputate ac.</p>
+    </div>
+}
